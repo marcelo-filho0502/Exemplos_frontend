@@ -1,37 +1,48 @@
-import FlexCarousel from './FlexCarousel'
-import './App.css'
+import { useLang } from './i18n/LanguageContext'
+import { useEffect } from 'react'
+import Navbar from './components/Navbar/Navbar'
+import Hero from './components/Hero/Hero'
+import Showcase from './components/Showcase/Showcase'
+import Services from './components/Services/Services'
+import About from './components/About/About'
+import Skills from './components/Skillss/Skills'
+import Contact from './components/Contact/Contact'
+import CursorFX from './components/CursorFX/CursorFX'
+import VideoBackground from './components/VideoBackground/VideoBackground'
+import './styles/global.css'
 
 function App() {
+  const { t } = useLang()
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('visible')
+        })
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    )
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <main className="page">
-      <section className="carousel-section">
-        <FlexCarousel
-          preset="liquid"
-          intro="rise"
-          cardHeight={0.4}
-          gap={12}
-          squeeze={0.2}
-          focusOnClick
-          captions
-          fit="natural"
-          radius={0}
-          lensWidth={0.74}
-          lensHeight={1.18}
-          tilt={62}
-          roundness={1}
-          bend={0.30}
-          reach={0.38}
-          curl="twist"
-          dispersion={0.45}
-          liquid={0}
-          followCursor={false}
-          autoplay
-          interval={3}
-          autoplayStiffness={5}
-          captureWheel={false}
-        />
-      </section>
-    </main>
+    <div className="app">
+      <VideoBackground />
+      <CursorFX />
+      <Navbar />
+      <main>
+        <Hero />
+        <Showcase />
+        <Services />
+        <About />
+        <Skills />
+        <Contact />
+      </main>
+      <footer className="footer">
+        <p>{t.footer}</p>
+      </footer>
+    </div>
   )
 }
 
