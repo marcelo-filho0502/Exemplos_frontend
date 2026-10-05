@@ -1,0 +1,15 @@
+.iridescence-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: #000;
+  overflow: hidden;
+}
+
+/* escurece o fundo para os textos ficarem legíveis; ajuste o 0.45 */
+.iridescence-bg-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}

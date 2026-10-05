@@ -8,7 +8,7 @@ import About from './components/About/About'
 import Skills from './components/Skillss/Skills'
 import Contact from './components/Contact/Contact'
 import CursorFX from './components/CursorFX/CursorFX'
-import LinesBackground from './components/FloatingLines/LinesBackground'
+import IridescenceBackground from './components/Iridescence/IridescenceBackground'
 import './styles/global.css'
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="app">
-      <LinesBackground />
+      <IridescenceBackground />
       <CursorFX />
       <Navbar />
       <main>
