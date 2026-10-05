@@ -9,6 +9,7 @@ import Skills from './components/Skillss/Skills'
 import Contact from './components/Contact/Contact'
 import CursorFX from './components/CursorFX/CursorFX'
 import VideoBackground from './components/VideoBackground/VideoBackground'
+import LinesBackground from './components/FloatingLines/LinesBackground'
 import './styles/global.css'
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className="app">
       <VideoBackground />
+      <LinesBackground />
       <CursorFX />
       <Navbar />
       <main>
