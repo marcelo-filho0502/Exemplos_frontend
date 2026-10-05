@@ -27,4 +27,4 @@ html.fx-on input, html.fx-on textarea { cursor: text; }
   box-shadow: 0 0 calc(var(--near, 0) * 16px) rgba(var(--accent-rgb), calc(var(--near, 0) * 0.45));
 }
 
-html.fx-on .flex-carousel { cursor: none; }
+html.fx-on .item__image { cursor: none; }

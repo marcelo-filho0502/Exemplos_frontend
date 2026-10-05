@@ -3,7 +3,7 @@ import './CursorFX.css'
 
 const MAGNETIC = '.btn, .social-item, .nav-logo'
 const TILT = '.project-card, .contact-card'
-const HOT = 'a, button, input, textarea, .project-card, .tech-tag, .flex-carousel'
+const HOT = 'a, button, input, textarea, .project-card, .tech-tag, .item__image'
 const vw = () => window.innerWidth
 const vh = () => window.innerHeight
 
