@@ -7,7 +7,6 @@ import Services from './components/Services/Services'
 import About from './components/About/About'
 import Skills from './components/Skillss/Skills'
 import Contact from './components/Contact/Contact'
-import CursorFX from './components/CursorFX/CursorFX'
 import IridescenceBackground from './components/Iridescence/IridescenceBackground'
 import './styles/global.css'
 
@@ -29,7 +28,6 @@ function App() {
   return (
     <div className="app">
       <IridescenceBackground />
-      <CursorFX />
       <Navbar />
       <main>
         <Hero />
