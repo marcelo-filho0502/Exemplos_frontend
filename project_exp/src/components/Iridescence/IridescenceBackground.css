@@ -13,3 +13,12 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
 }
+.iridescence-bg canvas {
+  filter: saturate(1.5) contrast(1.08);
+}
+
+.iridescence-bg-scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+}

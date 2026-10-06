@@ -198,3 +198,4 @@ body, .app { background: transparent; }
 body { text-shadow: 0 1px 12px rgba(0, 0, 0, 0.45); }
 .btn-primary { background: transparent; color: #fff; border: 1px solid #fff; }
 .btn-primary:hover, .btn-outline:hover { background: rgba(255, 255, 255, 0.18); color: #fff; }
+
